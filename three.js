@@ -245,6 +245,9 @@ function createSky(){
 
 AirPlane = function(){
   var geom = new THREE.CylinderBufferGeometry( 25, 75, 100, 40, 5 );
+	
+  geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
+	
   var mat = new THREE.MeshPhongMaterial({
     color:0x000000,
     shininess:70,
